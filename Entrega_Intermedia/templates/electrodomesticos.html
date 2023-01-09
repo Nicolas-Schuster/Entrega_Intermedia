@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Electrodomesticos
+{% endblock %}
+
+{% block content %}
+
+    {% for object in electrodomesticos %}
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{object.name}}</h5>
+            <p class="card-text">{{object.description}}</p>
+            <p class="card-text">{{object.price}}</p>
+            <p class="card-text">{{object.shipping_cost}}</p>
+            {% if object.stock == True %}
+                <p> Hay stock</p>
+            {% else %}
+                <p>Agotado</p>
+            {% endif %}
+            <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
