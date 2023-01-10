@@ -18,64 +18,85 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href='/products/electro/'>Electrodomesticos <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href='amigos/'>Hogar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href='amigos/'>Herramientas</a>
+                    <a class="nav-link" href='#'>Reclamos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/products/tecnologia/" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/products/electro/" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Electrodomesticos
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/products/electro/">Productos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/products/create/">Agregar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/products/hogar/" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Hogar
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/products/hogar/">Productos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/products/create2/">Agregar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/products/herramientas/" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Herramientas
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/products/herramientas/">Productos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/products/create3/">Agregar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/products/" role="button" data-toggle="dropdown" aria-expanded="false">
                     Tecnologia
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/products/tecnologia/">Computadoras</a>
-                    <a class="dropdown-item" href="#">Celulares</a>
+                    <a class="dropdown-item" href="/products/tecnologia/">Productos</a>
+                    <a class="dropdown-item" href="/products/electro/">Celulares</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/products/create1/">Agregar</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/products/indumentaria/" role="button" data-toggle="dropdown" aria-expanded="false">
                     Indumentaria
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Alta Montaña</a>
-                    <a class="dropdown-item" href="#">Ropa</a>
+                    <a class="dropdown-item" href="/products/indumentaria/">Productos</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Zapatos</a>
+                    <a class="dropdown-item" href="/products/create4/">Agregar</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/products/perfumeria/" role="button" data-toggle="dropdown" aria-expanded="false">
                     Perfumeria
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Bebes</a>
-                    <a class="dropdown-item" href="#">Higiene</a>
+                    <a class="dropdown-item" href="/products/perfumeria/">Productos</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Belleza</a>
+                    <a class="dropdown-item" href="/products/create5/">Agregar</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/products/automotor/" role="button" data-toggle="dropdown" aria-expanded="false">
                     Automotor
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Vehiculos</a>
-                    <a class="dropdown-item" href="#">Accesorios</a>
+                    <a class="dropdown-item" href="/products/automotor/">Productos</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Refacciones</a>
+                    <a class="dropdown-item" href="/products/create6/">Agregar</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled">Estamos trabajando...</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" action="/products/tecnologia/" method="GET">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" action='/products/tecnologia/' method="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
                 </div>
