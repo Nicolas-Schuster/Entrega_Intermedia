@@ -56,3 +56,6 @@ class Automotor(models.Model):
     description = models.CharField(max_length=100)
     stock = models.BooleanField(default=True)
     shipping_cost= models.FloatField()
+
+
+
