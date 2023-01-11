@@ -5,8 +5,37 @@ from app_1.forms import ElectrodomesticosForm, TecnologiaForm, HogarForm, Herram
 
 
 
-def saludo(request):
-    return HttpResponse('Hola estamos comprobando')
+
+
+def all(request):
+    if 'search' in request.GET:
+        search = request.GET['search']
+        all_electrodomesticos = Electrodomesticos.objects.filter(name__contains=search)
+        all_tecnos = Tecnologia.objects.filter(name__contains=search)
+        all_houses = Hogar.objects.filter(name__contains=search)
+        all_tools = Herramientas.objects.filter(name__contains=search)
+        all_garments = Indumentaria.objects.filter(name__contains=search)
+        all_fragances = Perfumeria.objects.filter(name__contains=search)
+        all_accesories = Automotor.objects.filter(name__contains=search)
+    else:
+        all_tecnos = Tecnologia.objects.all()
+        all_electrodomesticos = Electrodomesticos.objects.all()
+        all_houses = Hogar.objects.all()
+        all_tools = Herramientas.objects.all()
+        all_garments = Indumentaria.objects.all()
+        all_fragances = Perfumeria.objects.all()
+        all_accesories = Automotor.objects.all()
+    context = {
+        'stock_tecno':all_tecnos,
+        'stock_electro':all_electrodomesticos,
+        'stock_house':all_houses,
+        'stock_tools':all_tools,
+        'stock_garments':all_garments,
+        'stock_fragances':all_fragances,
+        'stock_accesories':all_accesories,
+    }
+    return render(request, 'all.html', context=context)
+
 
 def new_product(request):
     if request.method == 'GET':
@@ -35,7 +64,7 @@ def new_product(request):
                 'form':ElectrodomesticosForm()
             }
         return render(request, 'create1.html/', context=context)
-        
+
 
 def electro(request):
     if 'search' in request.GET:
@@ -157,7 +186,11 @@ def new_tool(request):
 
 
 def tools(request):
-    all_tools = Herramientas.objects.all()
+    if 'search' in request.GET:
+        search = request.GET['search']
+        all_tools = Herramientas.objects.filter(name__contains=search)
+    else:
+        all_tools = Herramientas.objects.all()
     context = {
         'stock_tools':all_tools,
     }
@@ -194,7 +227,11 @@ def new_garment(request):
 
 
 def garments(request):
-    all_garments = Indumentaria.objects.all()
+    if 'search' in request.GET:
+        search = request.GET['search']
+        all_garments = Indumentaria.objects.filter(name__contains=search)
+    else:
+        all_garments = Indumentaria.objects.all()
     context = {
         'stock_garments':all_garments,
     }
@@ -231,7 +268,11 @@ def new_fragance(request):
 
 
 def fragance(request):
-    all_fragances = Perfumeria.objects.all()
+    if 'search' in request.GET:
+        search = request.GET['search']
+        all_fragances = Perfumeria.objects.filter(name__contains=search)
+    else:
+        all_fragances = Perfumeria.objects.all()
     context = {
         'stock_fragances':all_fragances,
     }
@@ -268,12 +309,15 @@ def new_accesories(request):
 
 
 def accesories(request):
-    all_accesories = Automotor.objects.all()
+    if 'search' in request.GET:
+        search = request.GET['search']
+        all_accesories = Automotor.objects.filter(name__contains=search)
+    else:
+        all_accesories = Automotor.objects.all()
     context = {
         'stock_accesories':all_accesories,
     }
     return render(request, 'automotor.html/', context=context)
-
 
 
 

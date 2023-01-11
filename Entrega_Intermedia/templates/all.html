@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Tecnologia
+{% endblock %}
+
+{% block content %}
+
+{% for object in stock_tecno %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_electro %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_house %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_tools %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_garments %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_fragances %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for object in stock_accesories %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text"> Descripcion: {{object.description}}</p>
+        <p class="card-text"> Precio: ${{object.price}}</p>
+        <p class="card-text"> Envio: ${{object.shipping_cost}}</p>
+        {% if object.stock == True %}
+            <p> En stock</p>
+        {% else %}
+            <p>Agotado</p>
+        {% endif %}
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}
